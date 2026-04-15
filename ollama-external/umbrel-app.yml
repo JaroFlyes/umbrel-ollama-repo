@@ -7,8 +7,7 @@ version: "1.0.0"
 port: 11436
 description: >-
   Acessa o Ollama rodando no servidor da sua rede local (192.168.0.7:11435).
-  Permite usar modelos de linguagem como llama3, mistral e outros
-  diretamente pelo Umbrel, sem instalar nada novo.
+  Permite usar modelos como llama3, mistral e outros sem instalar nada novo.
 website: https://ollama.com
 icon: https://avatars.githubusercontent.com/u/151674099?s=200&v=4
 developer: JaroFlyes
@@ -18,4 +17,4 @@ support: https://github.com/JaroFlyes/umbrel-ollama-repo/issues
 gallery: []
 path: ""
 dependencies: []
-releaseNotes: "Proxy direto para Ollama externo na rede local"
+releaseNotes: "Formato correto com exports.sh"
