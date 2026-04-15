@@ -1,21 +1,20 @@
 manifestVersion: 1
 id: ollama-external
 name: Ollama
-tagline: Run large language models locally
+tagline: Run large language models locally on your network
 category: ai
 version: "1.0.0"
 port: 11436
-description: >-
-  Ollama is an external LLM service running on this network.
-  This app proxies access to the Ollama instance on port 11435.
+description: >
+  Proxy para acessar o Ollama rodando externamente na sua rede local.
+  Conecta ao servidor Ollama na porta 11435.
 website: https://ollama.com
-icon: https://raw.githubusercontent.com/ollama/ollama/main/docs/static/ollama.png
-developer: Ollama
+icon: https://avatars.githubusercontent.com/u/151674099?s=200&v=4
+developer: JaroFlyes
 submittedBy: JaroFlyes
 repo: https://github.com/JaroFlyes/umbrel-ollama-repo
-support: https://github.com/JaroFlyes/umbrel-ollama-repo
+support: https://github.com/JaroFlyes/umbrel-ollama-repo/issues
 gallery: []
 path: ""
 dependencies: []
-releaseNotes: "Initial release"
-permissions: []
+releaseNotes: "Correcao do formato docker-compose"
