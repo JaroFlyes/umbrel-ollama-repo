@@ -5,11 +5,10 @@ services:
   app_proxy:
     environment:
       APP_HOST: jaroflyes-ollama_proxy_1
-      APP_PORT: 80
+      APP_PORT: 11435
       PROXY_AUTH_ADD: "false"
 
   proxy:
-    image: nginx:alpine
+    image: alpine/socat
     restart: unless-stopped
-    command: |
-      sh -c 'printf "events{}\nhttp{server{listen 80;location/{proxy_pass http://192.168.0.7:11435;proxy_set_header Host \$$host;proxy_set_header X-Real-IP \$$remote_addr;}}}" > /etc/nginx/nginx.conf && nginx -g "daemon off;"'
+    command: TCP-LISTEN:11435,fork,reuseaddr TCP:192.168.0.7:11435
