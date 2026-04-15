@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: jaroflyes-openwebui
+name: Open WebUI
+tagline: Interface grafica para seus modelos Ollama
+icon: https://avatars.githubusercontent.com/u/158137808?s=200&v=4
+category: AI
+version: "1.0.0"
+port: 3080
+description: >-
+  Interface web completa para interagir com modelos de linguagem via Ollama.
+  Suporta historico de conversas, multiplos modelos, upload de arquivos e muito mais.
+  Ja configurado para conectar ao Ollama rodando na sua rede local.
+developer: JaroFlyes
+website: https://openwebui.com
+submitter: JaroFlyes
+submission: https://github.com/JaroFlyes/umbrel-ollama-repo
+repo: https://github.com/JaroFlyes/umbrel-ollama-repo
+support: https://github.com/JaroFlyes/umbrel-ollama-repo/issues
+gallery:
+  - https://avatars.githubusercontent.com/u/158137808?s=200&v=4
+releaseNotes: >-
+  Primeira versao com Ollama externo pre-configurado.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
