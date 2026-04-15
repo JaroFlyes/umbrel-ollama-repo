@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  app_proxy:
+    image: caddy:2
+    container_name: ollama_app_proxy
+    restart: unless-stopped
+    network_mode: host
+    command: ["caddy", "reverse-proxy", "--from", "0.0.0.0:11436", "--to", "http://192.168.0.7:11435"]
