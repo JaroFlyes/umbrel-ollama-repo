@@ -3,10 +3,10 @@ services:
   app_proxy:
     environment:
       APP_HOST: jaroflyes-ollama_proxy_1
-      APP_PORT: 11435
+      APP_PORT: 11437
       PROXY_AUTH_ADD: "false"
 
   proxy:
     image: alpine/socat
     restart: unless-stopped
-    command: TCP-LISTEN:11435,fork,reuseaddr TCP:192.168.0.7:11435
+    command: TCP-LISTEN:11437,fork,reuseaddr TCP:192.168.0.7:11435
