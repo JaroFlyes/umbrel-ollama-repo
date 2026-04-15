@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+
+  app_proxy:
+    environment:
+      APP_HOST: 192.168.0.7
+      APP_PORT: 11435
+      PROXY_AUTH_ADD: "false"

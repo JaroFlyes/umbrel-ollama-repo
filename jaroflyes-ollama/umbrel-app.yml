@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: jaroflyes-ollama
+name: Ollama
+tagline: LLMs rodando na sua rede local
+icon: https://avatars.githubusercontent.com/u/151674099?s=200&v=4
+category: AI
+version: "1.0.0"
+port: 11435
+description: >-
+  Acessa o Ollama rodando no servidor da sua rede local.
+  Suporta modelos como llama3, mistral, deepseek e outros.
+developer: JaroFlyes
+website: https://ollama.com
+submitter: JaroFlyes
+submission: https://github.com/JaroFlyes/umbrel-ollama-repo
+repo: https://github.com/JaroFlyes/umbrel-ollama-repo
+support: https://github.com/JaroFlyes/umbrel-ollama-repo/issues
+gallery:
+  - https://avatars.githubusercontent.com/u/151674099?s=200&v=4
+releaseNotes: >-
+  Proxy para Ollama externo na rede local.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
