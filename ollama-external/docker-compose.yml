@@ -1,8 +1,19 @@
 version: "3.7"
+
 services:
   app_proxy:
-    image: caddy:2
-    container_name: ollama_app_proxy
+    environment:
+      APP_HOST: $APP_OLLAMA_EXTERNAL_IP
+      APP_PORT: $APP_OLLAMA_EXTERNAL_PORT
+      PROXY_AUTH_ADD: "false"
+
+  server:
+    image: alpine:3.18
     restart: unless-stopped
+    stop_grace_period: 1m
+    command: >
+      sh -c "while true; do sleep 3600; done"
+    environment:
+      - OLLAMA_HOST=192.168.0.7
+      - OLLAMA_PORT=11435
     network_mode: host
-    command: ["caddy", "reverse-proxy", "--from", "0.0.0.0:11436", "--to", "http://192.168.0.7:11435"]
