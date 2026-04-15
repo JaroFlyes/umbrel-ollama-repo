@@ -4,7 +4,7 @@ name: Ollama
 tagline: LLMs rodando na sua rede local
 icon: https://avatars.githubusercontent.com/u/151674099?s=200&v=4
 category: AI
-version: "1.0.0"
+version: "1.0.1"
 port: 11435
 description: >-
   Acessa o Ollama rodando no servidor da sua rede local.
@@ -18,7 +18,7 @@ support: https://github.com/JaroFlyes/umbrel-ollama-repo/issues
 gallery:
   - https://avatars.githubusercontent.com/u/151674099?s=200&v=4
 releaseNotes: >-
-  Proxy para Ollama externo na rede local.
+  Adiciona nginx como bridge para Ollama externo.
 dependencies: []
 path: ""
 defaultUsername: ""
