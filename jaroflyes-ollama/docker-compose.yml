@@ -1,12 +1,18 @@
+version: "3.7"
+
 services:
+  ollama:
+    image: ollama/ollama:latest
+    restart: unless-stopped
+    volumes:
+      - ./data:/root/.ollama
+    ports:
+      - "11435:11434"   # porta interna 11434 → porta host 11435 (ajuste se quiser)
 
   app_proxy:
-    environment:
-      APP_HOST: jaroflyes-ollama_proxy_1
-      APP_PORT: 11437
-      PROXY_AUTH_ADD: "false"
-
-  proxy:
-    image: alpine/socat
+    image: umbrellabs/proxy:latest
     restart: unless-stopped
-    command: TCP-LISTEN:11437,fork,reuseaddr TCP:192.168.0.7:11435
+    environment:
+      APP_HOST: ollama
+      APP_PORT: 11434
+      PROXY_AUTH_ADD: "false"
