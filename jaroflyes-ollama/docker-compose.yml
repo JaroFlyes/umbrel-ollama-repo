@@ -1,16 +1,13 @@
-version: '3.7'
 services:
   ollama:
-    image: ollama/ollama:1.0.0
+    image: ollama/ollama:latest
     restart: unless-stopped
     volumes:
-      - ./data:/root/.ollama
-    ports:
-      - '11435:11434'
+      - ${APP_DATA_DIR}/data:/root/.ollama
     container_name: jaroflyes-ollama_ollama_1
 
   app_proxy:
-    image: umbrellabs/proxy:latest   # ← problema aqui
+    image: getumbrel/app-proxy:v0.1.0
     restart: unless-stopped
     environment:
       APP_HOST: ollama
