@@ -1,5 +1,4 @@
-version: "3.7"
-
+version: '3.7'
 services:
   ollama:
     image: ollama/ollama:latest
@@ -7,12 +6,14 @@ services:
     volumes:
       - ./data:/root/.ollama
     ports:
-      - "11435:11434"   # porta interna 11434 → porta host 11435 (ajuste se quiser)
+      - '11435:11434'
+    container_name: jaroflyes-ollama_ollama_1
 
   app_proxy:
-    image: umbrellabs/proxy:latest
+    image: umbrellabs/proxy:latest   # ← problema aqui
     restart: unless-stopped
     environment:
       APP_HOST: ollama
       APP_PORT: 11434
-      PROXY_AUTH_ADD: "false"
+      PROXY_AUTH_ADD: 'false'
+    container_name: jaroflyes-ollama_app_proxy_1
