@@ -14,3 +14,19 @@ services:
     environment:
       - OLLAMA_BASE_URL=http://192.168.0.7:11435
       - WEBUI_SECRET_KEY=jaroflyes-secret-key
+
+  open-terminal:
+    image: ghcr.io/open-webui/open-terminal:main
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      - open-terminal-data:/home/user
+      - /:/host
+      - /run/docker.sock:/var/run/docker.sock
+    user: root
+    environment:
+      - OPEN_TERMINAL_API_KEY=f1l2p3J4r5
+
+volumes:
+  open-terminal-data:
