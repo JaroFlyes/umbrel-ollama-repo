@@ -4,7 +4,7 @@ name: Open WebUI
 tagline: Interface grafica para seus modelos Ollama
 icon: https://avatars.githubusercontent.com/u/158137808?s=200&v=4
 category: AI
-version: "1.0.0"
+version: "1.0.1"
 port: 3080
 description: >-
   Interface web completa para interagir com modelos de linguagem via Ollama.
